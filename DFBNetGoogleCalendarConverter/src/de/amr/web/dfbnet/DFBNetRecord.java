@@ -1,4 +1,4 @@
-package org.zwickmann.dfbnet;
+package de.amr.web.dfbnet;
 
 public class DFBNetRecord
 {

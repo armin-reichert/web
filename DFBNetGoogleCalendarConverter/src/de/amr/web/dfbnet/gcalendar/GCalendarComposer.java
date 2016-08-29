@@ -1,12 +1,12 @@
-package org.zwickmann.dfbnet.gcalendar;
+package de.amr.web.dfbnet.gcalendar;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
-import org.zwickmann.dfbnet.DFBNetColumn;
-import org.zwickmann.dfbnet.DFBNetRecord;
+import de.amr.web.dfbnet.DFBNetColumn;
+import de.amr.web.dfbnet.DFBNetRecord;
 
 public class GCalendarComposer
 {

@@ -1,4 +1,4 @@
-package org.zwickmann.dfbnet;
+package de.amr.web.dfbnet;
 
 import java.io.BufferedReader;
 import java.io.IOException;

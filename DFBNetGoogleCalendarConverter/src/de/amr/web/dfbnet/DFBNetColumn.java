@@ -1,4 +1,4 @@
-package org.zwickmann.dfbnet;
+package de.amr.web.dfbnet;
 
 /**
  * Columns of CSV file exported from DFBNet.

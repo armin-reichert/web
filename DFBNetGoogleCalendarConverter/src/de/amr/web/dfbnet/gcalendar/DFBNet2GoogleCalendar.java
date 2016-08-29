@@ -1,4 +1,4 @@
-package org.zwickmann.dfbnet.gcalendar;
+package de.amr.web.dfbnet.gcalendar;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,10 +6,10 @@ import java.io.PrintStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 
-import org.zwickmann.dfbnet.DFBNetCSVReader;
-import org.zwickmann.dfbnet.DFBNetRecord;
-import org.zwickmann.dfbnet.DFBNetRecordList;
-import org.zwickmann.dfbnet.gcalendar.GCalendarComposer.GCalendarColumn;
+import de.amr.web.dfbnet.DFBNetCSVReader;
+import de.amr.web.dfbnet.DFBNetRecord;
+import de.amr.web.dfbnet.DFBNetRecordList;
+import de.amr.web.dfbnet.gcalendar.GCalendarComposer.GCalendarColumn;
 
 /**
  * Converts a CSV file exported from DFBNet into a CSV file that can be imported
