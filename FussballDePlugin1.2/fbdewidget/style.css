@@ -1,0 +1,20 @@
+.fbdePlg div iframe {
+	width: 100% !important;
+}
+.fbdePlgTrailing .fixme {
+	display: none !important;
+}
+.fbdePlg.notabs .fixme {
+	display: none !important;	
+}
+body.fbde div header {
+		display: none !important;	
+}
+.fbdePlgHasErrors {
+	border: 2px solid #f00;
+	padding: 10px 0 10px 0;
+}
+.fbdePlgNoErrors {
+	border: 2px solid #6f3;
+	padding: 10px 0 10px 0;
+}

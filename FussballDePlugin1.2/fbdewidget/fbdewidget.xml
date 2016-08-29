@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" version="2.5" method="upgrade">
+	<name>plg_content_fbdewidget</name>
+	<version>1.1</version>
+	<creationDate>October 2013</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-3.0</license>
+	<copyright>Copyright 2013 Armin Reichert. All rights reserved.</copyright>
+	<author>Armin Reichert</author>
+	<authorEmail>armin.reichert@web.de</authorEmail>
+	<description>
+	<![CDATA[
+<p>Diese Joomla! Erweiterung erleichtert die Verwendung des <a href="http://fussball.de">fussball.de</a>-Widgets.</p>
+<p><strong>Plugin-Parameter:</strong></p>
+<ul>
+<li>Website: Hier trägt man die Domain der Website ein, auf der das fussball.de Widget angezeigt werden soll</li>
+<li>Schlüssel: Der zugehörige API Schlüssel</li>
+<li>Breite des Widgets: Standardbreite der angezeigten Widgets, z.B. 100%, 500px. Kann für jedes einzelne Widget überschrieben werden (siehe unten)</li>
+<li>Name Ihres Vereins: Wird im Verschönerungsmodus verwendet, um den eigenen Verein in Widgets graphisch hervorzuheben.</li>
+<li>Darstellung verschönern: Falls aktiv, wird die Darstellung des Widgets in der Seite verschönert.</li>
+<li>Fehlererkennungsmodus: Falls aktiv, werden die Widgetverwendungen geprüft und Fehler an der Verwendungsstelle angezeigt.</li>
+</ul>
+<p><strong>Aufruf in einem Artikel oder Modul:</strong></p>
+<p>Um ein Widget in einem Artikel einzubetten, gibt man einfach folgenden Text ein <span style="line-height: 14.296875px;">(Kein Leerzeichen nach der öffnenden Klammer!)</span>:</p>
+<p style="padding-left: 30px;"><span style="line-height: 1.3em;">{ fbde:TEILE, MANDANT, WETTBEWERB, STIL}</span></p>
+<p><strong>Aufrufparameter:</strong></p>
+<ul>
+<li><span style="line-height: 1.3em;">TEILE: Bestimmt, aus welchen Teilen die Ausgabe zusammengesetzt ist. Erlaubt sind folgende Werte:</span></li>
+<li style="margin-left: 30px;"><span style="line-height: 1.3em;"> "t" (Tabelle)</span></li>
+<li style="margin-left: 30px;"><span style="line-height: 1.3em;">"b" (Begegnungen)</span></li>
+<li style="margin-left: 30px;"><span style="line-height: 1.3em;">"bt" (Begegnungen über Tabelle anzeigen)</span></li>
+<li style="margin-left: 30px;"><span style="line-height: 1.3em;">"tb" (Tabelle über Begegnungen anzeigen)</span></li>
+<li><span style="line-height: 1.3em;">MANDANT: Mandant für den angezeigten Wettbewerb (siehe fusssball.de)</span></li>
+<li><span style="line-height: 1.3em;">WETTBEWERB: ID des angezeigten Wettbewerbs (siehe fussball.de)</span><span style="line-height: 1.3em;"></span></li>
+<li><span style="line-height: 1.3em;">STIL (optional):&nbsp;Stilangaben (durch einen Strichpunkt voneinander getrennt). Erlaubte Werte:</span>
+<ul>
+<li>breite:CSSgröße<em><br /></em>Erlaubte Maßeinheiten sind "px", "%" und "em". Fehlt die Maßeinheit, so wird "px" verwendet.<br />Beispiele: breite:20em, breite:100%, breite:500.<em><br /></em></li>
+<li>ohnereiter<strong><br /></strong>Blendet die Widget-Reiter ("Begegnungen", "Tabellen" etc.) aus</li>
+</ul>
+</li>
+</ul>
+<p><strong>Beispiel:</strong></p>
+<p style="margin-left: 30px;"><span style="line-height: 1.3em;">{&nbsp;</span>fbde: bt, 43, 01HC6APUP8000000VV0AG812VVFL8F56-G, breite:100%;ohnereiter}</p>
+<p><strong><span style="line-height: 1.3em;">Fehlersuche:</span></strong></p>
+<p><span style="line-height: 1.3em;">Sollten die Widgets auf der Website nicht angezeigt werden, so hat dies möglicherweise eine der folgende Ursachen:</span></p>
+<ol>
+<li>In den Plugin-Einstellungen sind falsche Werte für Website/Schlüssel eingetragen</li>
+<li>Die Website wird über eine Domain aufgerufen, die in den Plugin-Einstellungen nicht hinterlegt ist.</li>
+<li>Das Plugin ist nicht aktiviert (Status=Disabled)</li>
+<li>Im Aufruftext steht nach der öffnenden Klammer ein Leerzeichen</li>
+<li>Die Aufrufparameter sind unvollständig oder fehlerhaft&nbsp;</li>
+<li>Der Joomla! Editor hat Formatierungscode in den Widget-Aufruf eingefügt. Im Editor JCE kann man diese Formatierung über den Radiergummi in der Toolbar löschen. Andernfalls sollte man den Editormodus umschalten und das HTML direkt korrigieren.</li>
+</ol>
+<p>&nbsp;</p>
+<p>© 2013 Armin Reichert (armin.reichert@web.de)</p>
+<p>&nbsp;</p>
+]]>
+	</description>
+	<files>
+		<filename plugin="fbdewidget">fbdewidget.php</filename>
+		<filename>index.html</filename>
+		<filename>scripting.js</filename>
+		<filename>style.css</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="host1" type="text" size="50" label="Website"
+					description="Website URL, z.B. www.djkniederlosheim.de" />
+				<field name="key1" type="text" size="50" label="Schlüssel"
+					description="Schlüssel für Website" />
+				<field name="host2" type="text" size="50" label="Website"
+					description="Website URL, z.B. www.djkniederlosheim.de" />
+				<field name="key2" type="text" size="50" label="Schlüssel"
+					description="Schlüssel für Website" />
+				<field name="host3" type="text" size="50" label="Website"
+					description="Website URL, z.B. www.djkniederlosheim.de" />
+				<field name="key3" type="text" size="50" label="Schlüssel"
+					description="Schlüssel für Website" />
+				<field name="width" type="text" size="8" default="620px"
+					label="Breite des Widgets" description="Breite in Pixel, em oder Prozent (600px, 50em, 100%)" />
+				<field name="clubName" type="text" size="50" label="Name Ihres Vereins"
+					description="Vereinsname (oder Teil davon), wird im Widget hervorgehoben" />
+				<field name="beautify" type="checkbox" label="Darstellung verschönern"
+					description="Verschönert die Widgetdarstellung" value="1" default="0" />
+				<field name="debug" type="checkbox" label="Fehlererkennungsmodus"
+					description="Erkennt Fehler in der Widgetverwendung" value="1"
+					default="0" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
