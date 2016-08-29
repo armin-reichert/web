@@ -1,4 +1,4 @@
-package armin.fussball_de.output;
+package de.amr.web.fussballde.output;
 
 /**
  * Enum type for output formats.

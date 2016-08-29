@@ -1,4 +1,4 @@
-package armin.fussball_de.misc;
+package de.amr.web.fussballde.misc;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;

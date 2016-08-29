@@ -1,4 +1,4 @@
-package armin.fussball_de.controller;
+package de.amr.web.fussballde.controller;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -13,9 +13,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import armin.fussball_de.misc.Util;
-import armin.fussball_de.model.Match;
-import armin.fussball_de.model.TeamSchedule;
+import de.amr.web.fussballde.misc.Util;
+import de.amr.web.fussballde.model.Match;
+import de.amr.web.fussballde.model.TeamSchedule;
 
 /**
  * Grabs the matches from the fussball.de team calendar page and writes them

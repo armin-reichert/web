@@ -1,4 +1,4 @@
-package armin.fussball_de.model;
+package de.amr.web.fussballde.model;
 
 import java.io.File;
 import java.io.Reader;

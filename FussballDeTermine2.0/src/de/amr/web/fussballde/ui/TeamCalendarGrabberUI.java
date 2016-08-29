@@ -1,4 +1,4 @@
-package armin.fussball_de.ui;
+package de.amr.web.fussballde.ui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -31,15 +31,15 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-import armin.fussball_de.controller.TeamCalendarGrabber;
-import armin.fussball_de.misc.FormBuilder;
-import armin.fussball_de.misc.Util;
-import armin.fussball_de.model.Match;
-import armin.fussball_de.model.TeamCalendarGrabberModel;
-import armin.fussball_de.model.TeamSchedule;
-import armin.fussball_de.model.TimeRange;
-import armin.fussball_de.output.GoogleCalendarCSVWriter;
-import armin.fussball_de.output.OutputFormat;
+import de.amr.web.fussballde.controller.TeamCalendarGrabber;
+import de.amr.web.fussballde.misc.FormBuilder;
+import de.amr.web.fussballde.misc.Util;
+import de.amr.web.fussballde.model.Match;
+import de.amr.web.fussballde.model.TeamCalendarGrabberModel;
+import de.amr.web.fussballde.model.TeamSchedule;
+import de.amr.web.fussballde.model.TimeRange;
+import de.amr.web.fussballde.output.GoogleCalendarCSVWriter;
+import de.amr.web.fussballde.output.OutputFormat;
 
 /**
  * User interface for the fussball.de team calendar grabber.

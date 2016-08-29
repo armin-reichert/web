@@ -1,9 +1,9 @@
-package armin.fussball_de.output;
+package de.amr.web.fussballde.output;
 
 import java.io.PrintStream;
 import java.util.List;
 
-import armin.fussball_de.model.Match;
+import de.amr.web.fussballde.model.Match;
 
 /**
  * Interface for classes that write the match list to a print stream.

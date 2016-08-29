@@ -1,4 +1,4 @@
-package armin.fussball_de.controller;
+package de.amr.web.fussballde.controller;
 
 import java.util.Collections;
 import java.util.List;

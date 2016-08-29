@@ -1,4 +1,4 @@
-package armin.fussball_de.misc;
+package de.amr.web.fussballde.misc;
 
 import java.io.File;
 import java.io.FileOutputStream;

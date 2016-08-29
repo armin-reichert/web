@@ -1,4 +1,4 @@
-package armin.fussball_de.model;
+package de.amr.web.fussballde.model;
 
 /**
  * Enum type containing time intervals.

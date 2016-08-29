@@ -1,4 +1,4 @@
-package armin.fussball_de.model;
+package de.amr.web.fussballde.model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TeamCalendarGrabberModel {
 
-	private static final String SCHEDULE_LIST_PATH = "/armin/fussball_de/model/scheduleList.xml";
+	private static final String SCHEDULE_LIST_PATH = "/de/amr/web/fussballde/model/scheduleList.xml";
 
 	private TeamScheduleCollection schedules;
 	private List<Match> matches;
