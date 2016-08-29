@@ -1,0 +1,44 @@
+/*
+ * Styles for simple layout.
+ *
+ * @author Armin Reichert
+ */
+body {
+	margin: 10px 0;
+}
+
+#pagecontainer {
+	border-spacing: 0px;
+	margin: 0 auto 50px auto; /* center in browser window */
+	max-width: 1050px;
+	min-height: 700px;
+	text-align: left;
+}
+
+#content-table {
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0 !important;
+	width: 100%;
+}
+
+#content-column {
+	vertical-align: top;
+}
+
+#content {
+	height: 100%;
+	padding: 20px 20px 20px 30px;
+	margin: 0;
+}
+
+#rpane-column {
+	min-width: 250px;
+	width: 280px;
+	vertical-align: top;
+}
+
+#rpane {
+	height: 100%;
+	padding: 5px 10px 10px 10px;
+}

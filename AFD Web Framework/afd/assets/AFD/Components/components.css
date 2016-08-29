@@ -1,0 +1,74 @@
+/* 
+ * Styles for AFD standard components.
+ *
+ * @author Armin Reichert
+ */
+.afdRoundedCorner {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; /* future proofing */
+}
+
+/* --- Buttons */
+a.afdButton {
+	background: #e7e7e8;
+	color: #3b5998;
+	font-size: 9pt;
+	padding: 6px 8px;
+	text-decoration: none;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+a.afdButton:VISITED {
+	color: #3b5998;
+}
+
+a.afdButton:HOVER {
+	background: #3b5998;
+	color: #fff;
+}
+
+/* --- Info boxes */
+.afdInfobox {
+	background: #fff;
+	margin-top: 1em;
+	padding: 0 0.8em 0.5em 0.8em;
+	text-align: center;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; /* future proofing */
+}
+
+.afdInfobox:first-child {
+	margin-top: 0;
+}
+
+.afdInfoboxContent a,.afdInfoboxContent div,.afdInfoboxContent ol,.afdInfoboxContent p,.afdInfoboxContent ul,.afdInfoboxContent td
+	{
+	font-size: 9pt;
+}
+
+.afdInfoboxTitle {
+	font-size: 10pt;
+	border-bottom: solid 1px #dfe3ee;
+	padding: 2px 0;
+}
+
+/* --- Breadrumb */
+.afdBreadcrumb {
+	padding: 5px 0 0 30px;
+}
+
+/* --- Menu */
+.afdMenu a.afdMenuItem,.afdMenu a.afdMenuItem:VISITED,.afdMenu a.afdMenuItem:HOVER {
+	color: blue;
+	padding: 5px;
+	text-decoration: underline;
+}
+
+.afdMenu .afdMenuItem.selected {
+	padding: 5px;
+	font-weight: bold;
+}

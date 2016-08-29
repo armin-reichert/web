@@ -1,0 +1,190 @@
+/*
+ * Styles for AFD framework default theme.
+ *
+ * @author Armin Reichert
+ */
+
+/*
+  http://webdesign.about.com/od/colorpalettes/ig/Color-Palettes/facebookpalette.htm
+	blue1: #3b5998
+	blue2: #8b9dc3
+	blue3: #f7f7f7
+	blue4: #dfe3ee
+*/
+
+/* --- HTML allgemein --- */
+body {
+	background: #3b5998;
+	font-family: Roboto, sans-serif;
+}
+
+a, div, ol, p, ul, td {
+	font-size: 11pt;
+	line-height: 1.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #3b5998;
+}
+
+h1 {
+	font-size: 130%;
+}
+
+h2 {
+	font-size: 110%;
+}
+
+h3 {
+	font-size: 100%;
+}
+
+h4, h5, h6 {
+	font-size: 90%;
+}
+
+a img {
+	outline: none;
+	border: none;
+}
+
+.topmargin {
+	margin-top: 2em;
+}
+
+.center {
+	text-align: center;
+}
+
+.center>div {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.rounded-corner {
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px; /* future proofing */
+}
+
+.dropshadow {
+	border: 1px solid #999;
+	box-shadow: 5px 5px 4px #ccc;
+}
+
+/* --- Seitentitel und Untertitel --- */
+header {
+	background-color: #fff;
+	padding: 30px 0px;
+	text-align: center;
+}
+
+header h1 {
+	color: orange;
+	font-family: 'Kaushan Script';
+	font-size: 30px;
+	margin: 0.5em;
+}
+
+header h3 {
+	color: #8b9dc3;
+	font-family: 'Kaushan Script';
+	font-size: 16px;
+	margin: 0;
+}
+
+/* --- Navigation --- */
+nav {
+	background-color: #333;
+	height: 36px;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	font-size: 10pt;
+	text-decoration: none;
+	color: #fff;
+	white-space: nowrap;
+	padding: 7px 12px 7px 12px;
+}
+
+nav ul li a:HOVER {
+	background-color: #3b5998;
+}
+
+/* --- Inhaltsbereich --- */
+#content-column {
+	background: #fff;
+}
+
+#rpane-column {
+	background: #8b9dc3;
+}
+
+#content {
+	background: #fff;
+	color: black;
+	text-align: left;
+	vertical-align: top;
+}
+
+h2.categoryTitle {
+	font-family: 'Kaushan Script';
+	font-size: 160%;
+	color: orange;
+}
+
+/* --- Streifen rechts --- */
+.rpane {
+	background: #8b9dc3;
+	text-align: center;
+	vertical-align: top;
+}
+
+/* --- Fußleiste --- */
+footer, footer a {
+	color: #fff;
+	font-size: 8pt;
+}
+
+/* --- OverviewPage */
+.overviewPageGroupHeader {
+	margin-top: 2em;
+	border-bottom: solid 1px #dfe3ee;
+}
+
+/* reset category titles to default style when inside overview content: */
+.overviewPageContent h2.categoryTitle {
+	font-family: Roboto, sans-serif;
+	font-size: 110%;
+	color: #3b5998;
+}
+
+/* --- Breadcrumb */
+.afdBreadcrumb, .afdBreadcrumb a {
+	color: #666;
+	font-size: 8pt;
+}
+
+.afdBreadcrumb a {
+	text-decoration: none;
+}
+
+.afdBreadcrumb a:hover {
+	text-decoration: underline;
+}
