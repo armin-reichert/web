@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+<name>Google Calendar Feed</name>
+<creationDate>December 2014</creationDate>
+<version>2.0.1</version>
+<author>GraphicAholic</author>
+<copyright>Copyright 2014-2015 - graphicaholic.com</copyright>
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+<authorEmail>support@graphicaholic.com</authorEmail>
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+	<description>
+	<![CDATA[
+		<a href="http://www.graphicaholic.com"><img src="../modules/mod_gcalendarfeed/images/GCFS_300px.jpg" alt="Google Calendar Feed Scroller"/></a><p>Google Calendar Feed Scroller is a jQuery module that pulls your <b>public</b> Google Calendar events and display them in your Joomla! 3.x website. Google Calendar Feed Scroller is feature & option rich giving you total control over display & styling. Oh, did I mention, <b><span style="color:#990000;">"Google Calendar Feed Scroller is 100% <u>FREE</u> to use, abuse and enjoy!"</b></span></p>
+			<p>Current release: v2.0.1</p>
+			<p>Initial release: v1.9.5</p>
+	]]>
+	</description>
+	<files>
+		<filename module="mod_gcalendarfeed">mod_gcalendarfeed.php</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+		<folder>tmpl</folder>
+		<folder>images</folder>
+		<folder>assets</folder>
+		<folder>fields</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_gcalendarfeed.xml</filename>
+	</files>
+	<config> 
+	<fields name="params" addfieldpath="/modules/mod_gcalendarfeed/fields">	
+	<!-- General Settings -->
+	<fieldset name="general" group="general" label="General Settings">	
+	<field name="gcalTitle" type="text" default="" label="Calendar Title" description="Type in your calendar title" />
+	<field name="gcalID" type="text" default="" label="Google Calendar ID" description="Type in your Google Calendar ID. If your Google Calendar ID is an Email address, use %40 as the @ symbol. This will help prevent getting spam in your in-box." />
+	<field name="gcalAPI" type="text" default="AIzaSyD0vtTUjLXzH4oKCzNRDymL6E3jKBympf0" label="Google Calendar API" description="Enter your Google Calendar API" />
+	<field name="maxItems" type="text" default="20" label="Number of events to show" description="Number of events to show" />
+	<field name="showDescription" type="list" class="btn-group" default="2" label="Show events description?" description="Show events description? Will not show descriptions if none were entered within Google Calendar.">
+		<option value="2">JYES</option>
+		<option value="1">JNO</option>
+	</field>
+	<field name="autoScroll" type="list" class="btn-group" default="true" label="Auto scroll events?" description="Auto scroll events?">
+		<option value="true">JYES</option>
+		<option value="false">JNO</option>
+	</field>
+	<field name="scrollSpeed" type="text" showon="autoScroll:true" default="5" label="Scroll Speed" description="Enter a value from 1 to 10. The higher the value, the slower the scroll." />
+	<field name="gcalWidth" type="text" default="100%" label="Container width" description="Container width" />
+	<field name="gcalHeight" type="text" default="200px" label="Container height" description="Container height" />		
+	<field name="linkItem" type="list" class="btn-group" default="true" label="Link event title?" description="Setting to Yes will set an events link back to the Google Calendar event">
+		<option value="true">JYES</option>
+		<option value="false">JNO</option>
+	</field>
+	<field name="linkTarget" type="list" showon="linkItem:true" class="btn-group" default="_blank" label="Open event link in" description="">
+		<option value="_blank">New window</option>
+		<option value="_self">Same window</option>
+	</field>
+	<field name="dateFormat" type="list" class="btn-group" default="1" label="Select date format" description="Select date format">
+		<option value="1">M-D-Y</option>
+		<option value="2">D-M-Y</option>
+		<option value="3">Y-M-D</option>
+	</field>		
+	<field name="dateSeparator" type="list" class="btn-group" default="3" label="Select date separator format" description="Select date separator format">
+		<option value="1">Slash</option>
+		<option value="2">Dot</option>
+		<option value="3">Hyphen</option>
+	</field>	
+	<field name="fullYear" type="list" class="btn-group" default="-2" label="Show full year?" description="Show full year?">
+		<option value="-2">JNO</option>
+		<option value=" ">JYES</option>	
+	</field>	
+	<field name="noEvent" type="text" default="" label="Text to show if no events" description="Text to show if no events" />
+	</fieldset>	
+	<fieldset name="style" group="style" label="General Styling">
+	<field name="showHeader" type="list" class="btn-group" default="show" label="Show header?" description="Show header?">
+		<option value="show">JYES</option>
+		<option value="hide">JNO</option>
+	</field>
+	<field name="headerColor" type="colorgrid" showon="showHeader:show" default="#333333" label="Header background color" description="Header background color" />
+	<field name="headerText" type="colorgrid" showon="showHeader:show" default="#FFFFFF" label="Header text color" description="Header text color" />	
+	<field name="showFooter" type="list" class="btn-group" default="show" label="Show footer?" description="Show footer?">
+		<option value="show">JYES</option>
+		<option value="hide">JNO</option>	
+	</field>
+	<field name="footerData" type="text" showon="showFooter:show" default="" label="Footer text" description="Footer text" />
+	<field name="footerColor" type="colorgrid" showon="showFooter:show" default="#333333" label="Footer background color" description="Footer background color" />
+	<field name="footerText" type="colorgrid" showon="showFooter:show" default="#FFFFFF" label="Footer text color" description="Footer text color" />
+	<field name="containerHeight" type="text" default="75%" label="Container height" description="Container height" />
+	<field name="containerColor" type="colorgrid" default="#FFFFFF" label="Container background color" description="Container background color" />
+	<field name="containerText" type="colorgrid" default="#000000" label="Container text color" description="Container text color" />
+	<field name="descriptionColor" type="colorgrid" showon="showDescription:2" default="#AAAAAA" label="Description text color" description="Description text color" />
+	<field name="seperatorLine" type="list" default="dashed" label="Seperator line style" description="Seperator style">
+		<option value="0">Dash</option>
+		<option value="1">Solid</option>
+	</field>
+	<field name="seperatorSize" type="text" default="1px" label="Seperator line size" description="Seperator line size" />
+	<field name="seperatorColor" type="colorgrid" default="#CCCCCC" label="Seperator line color" description="Seperator line color" />	
+	<field name="bottomMargin" type="text" default="0px" label="Bottom margin spacing" description="Bottom margin spacing" />	
+	</fieldset>
+	<!-- Advanced Settings -->
+	<fieldset name="advanced" group="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+				<field name="documentation" type="docs" default="900" label="" description="" />
+	</fieldset>
+</fields>
+</config>
+</extension>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:teamScheduleCollection xmlns:ns2="armin.fussball_de.xml.jaxb.model">
+	<scheduleCollection>
+		<schedule>
+			<teamName>SG Wahlen/Niederlosheim</teamName>
+			<url>http://www.fussball.de/mannschaft/sg-wahlen-niederlosheim-sv-wahlen-saarland/-/saison/1415/team-id/019UKBV4M8000000VV0AG811VVGIENKF#!/section/teamMatchplan</url>
+		</schedule>
+		<schedule>
+			<teamName>FSG Niederlosheim</teamName>
+			<url>
+			</url>
+		</schedule>
+		<schedule>
+			<teamName>DJK Niederlosheim</teamName>
+			<url>
+			</url>
+		</schedule>
+	</scheduleCollection>
+</ns2:teamScheduleCollection>
