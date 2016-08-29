@@ -1,0 +1,12 @@
+.google-calendar-feed-title {
+	color: #f00;
+}
+
+.google-calendar-feed-item-description {
+	white-space: pre-wrap;
+	color: #999;
+}
+
+.google-calendar-feed-item-location {
+	font-size: smaller;
+}

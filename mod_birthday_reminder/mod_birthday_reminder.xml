@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="site" method="upgrade">
+	
+	<!-- Author -->
+	<name>Birthday Reminder</name>
+	<author>Armin Reichert</author>
+	<authorEmail>armin.reichert@web.de</authorEmail>
+	<creationDate>June 2015</creationDate>
+	<copyright>Copyright (C) 2015 Armin Reichert. All rights reserved.</copyright>
+	<license></license>
+	<version>1.0.0</version>
+	<description>
+	    <![CDATA[
+	    <strong>Displays a birthday reminder</strong>
+	    ]]>
+	</description>
+	
+	<!-- Content -->
+	<files>
+		<filename module="mod_birthday_reminder">mod_birthday_reminder.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+	</files>
+	
+	<!-- Languages -->
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_birthday_reminder.ini</language>
+	</languages>
+	
+	<!-- Configuration -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="clientId"
+					type="text"
+					default=""
+					label="MOD_BIRTHDAY_REMINDER_FIELD_CLIENT_ID_LABEL"
+					description="MOD_BIRTHDAY_REMINDER_FIELD_CLIENT_ID_DESC" />
+			  <field
+					name="calendarId"
+					type="text"
+					default=""
+					label="MOD_BIRTHDAY_REMINDER_FIELD_CALENDAR_ID_LABEL"
+					description="MOD_BIRTHDAY_REMINDER_FIELD_CALENDAR_ID_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
