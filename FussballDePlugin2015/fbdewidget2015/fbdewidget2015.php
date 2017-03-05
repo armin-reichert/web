@@ -85,7 +85,7 @@ class plgContentFbdeWidget2015 extends JPlugin
     {
         $id = str_replace('.', '-', uniqid("fbdePlg_", true));
         $html = <<<END
-<div id="${id}">Lade Spielplan...</div>		
+<div id="${id}" class="fbde_widget">Lade Spielplan...</div>		
 <script type="text/javascript">
 new fussballdeWidgetAPI().showWidget('${id}', '${websiteKey}');
 </script>
