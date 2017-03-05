@@ -25,7 +25,7 @@ class plgContentFbdeWidget2015 extends JPlugin
     private function _hasLicense()
     {
         $today = getdate();
-        return $today["year"] <= 2015;
+        return $today["year"] <= 2020;
     }
 
     /**
@@ -85,7 +85,8 @@ class plgContentFbdeWidget2015 extends JPlugin
     {
         $id = str_replace('.', '-', uniqid("fbdePlg_", true));
         $html = <<<END
-<div id="${id}" class="fbde_widget">Lade Spielplan...</div>		
+<div id="${id}" class="fbde_widget">Lade Spielplan...</div>
+<style>.fbde_widget iframe { width: 100%; }</style>	
 <script type="text/javascript">
 new fussballdeWidgetAPI().showWidget('${id}', '${websiteKey}');
 </script>
