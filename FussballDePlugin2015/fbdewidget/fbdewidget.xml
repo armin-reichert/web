@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" version="3.0" method="upgrade">
+	<name>plg_content_fbdewidget</name>
+	<version>1.0</version>
+	<creationDate>July 2015</creationDate>
+	<copyright>Copyright 2015 Armin Reichert. All rights reserved.
+	</copyright>
+	<author>Armin Reichert</author>
+	<authorEmail>armin.reichert@web.de</authorEmail>
+	<description>
+	<![CDATA[
+<p>Diese Joomla! Erweiterung erleichtert die Verwendung des 
+<a href="http://fussball.de">fussball.de</a>-Widgets.</p>
+<p><strong>Aufruf in einem Artikel oder Modul:</strong></p>
+<p>Um ein Widget in einem Artikel einzubetten, gibt man folgenden Text ein 
+(Ohne Leerzeichen nach der öffnenden Klammer!):</p>
+<p style="padding-left: 30px;">{ fbde:WEBSITE-SCHLÜSSEL}</p>
+<p>Sollten die Widgets auf der Website nicht angezeigt werden, so hat dies 
+möglicherweise eine der folgende Ursachen:</p>
+<ol>
+<li>Das Plugin ist nicht aktiviert (Status=Disabled)</li>
+<li>Im Aufruftext steht nach der öffnenden Klammer ein Leerzeichen</li>
+<li>Der Joomla! Editor hat Formatierungscode in den Widget-Aufruf eingefügt. 
+Im Editor JCE kann man diese Formatierung über den Radiergummi in der Toolbar 
+löschen. Andernfalls sollte man den Editormodus umschalten und das HTML direkt 
+korrigieren.</li>
+</ol>
+<p>&nbsp;</p>
+<p>© 2015 Armin Reichert (armin.reichert@web.de)</p>
+<p>&nbsp;</p>
+]]>
+	</description>
+	<files>
+		<filename plugin="fbdewidget">fbdewidget.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+	</config>
+</extension>
