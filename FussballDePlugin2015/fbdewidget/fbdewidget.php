@@ -27,8 +27,9 @@ class plgContentFbdeWidget extends JPlugin {
 		if (count ( $pluginCalls ) == 0) {
 			return true;
 		}
-		
-		JFactory::getDocument ()->addScript ( self::WIDGET_SCRIPT );
+		$document = JFactory::getDocument();
+		$document->addScript ( self::WIDGET_SCRIPT );
+		$document->addStyleDeclaration('.fbde_widget iframe { width: 100%; }');
 		foreach ( $pluginCalls as $pluginCall ) {
 			$websiteKey = trim ( $pluginCall [1] );
 			if (! preg_match ( "/^[0-9A-Za-z\-]+$/", $websiteKey )) {
@@ -69,7 +70,6 @@ class plgContentFbdeWidget extends JPlugin {
 		$id = str_replace ( '.', '-', uniqid ( "fbdePlg_", true ) );
 		$html = <<<END
 <div id="${id}" class="fbde_widget">Lade Spielplan...</div>
-<style>.fbde_widget iframe { width: 100%; }</style>	
 <script type="text/javascript">
 new fussballdeWidgetAPI().showWidget('${id}', '${websiteKey}');
 </script>
