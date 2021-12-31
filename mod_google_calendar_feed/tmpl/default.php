@@ -19,7 +19,7 @@ $itemID = "";
 	<?php echo ModGoogleCalendarFeedHelper::fa("calendar") . $module->title; ?>
 </h3>
 <?php endif; ?>
-<div id="<?php echo $accordionID; ?>" class="panel-group">
+<div id="<?php echo $accordionID; ?>" class="accordion">
 <?php foreach ($events as $event): ?>
 <?php include 'default-item.php'; $itemCnt += 1; ?>
 <?php endforeach; ?>
